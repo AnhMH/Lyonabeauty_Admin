@@ -312,3 +312,30 @@ msgstr "Từ khóa"
 
 msgid "LABEL_TYPE"
 msgstr "Thể loại"
+
+msgid "LABEL_LOGO"
+msgstr "Logo (123x28px)"
+
+msgid "LABEL_TWITTER"
+msgstr "Twitter"
+
+msgid "LABEL_INSTAGRAM"
+msgstr "Instagram"
+
+msgid "LABEL_GOOGLE_PLUS"
+msgstr "Google plus"
+
+msgid "LABEL_YOUTUBE"
+msgstr "Youtube"
+
+msgid "LABEL_SEO_IMAGE"
+msgstr "SEO image"
+
+msgid "LABEL_SEO_DESCRIPTION"
+msgstr "SEO description"
+
+msgid "LABEL_SEO_KEYWORD"
+msgstr "SEO keywords"
+
+msgid "LABEL_COMPANIES_MANAGEMENT"
+msgstr "Thông tin công ty"
