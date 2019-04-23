@@ -338,4 +338,16 @@ msgid "LABEL_SEO_KEYWORD"
 msgstr "SEO keywords"
 
 msgid "LABEL_COMPANIES_MANAGEMENT"
-msgstr "Thông tin công ty"
+msgstr "Cấu hình website"
+
+msgid "LABEL_ZALO"
+msgstr "Zalo"
+
+msgid "LABEL_SCRIPT_HEADER"
+msgstr "Script Header"
+
+msgid "LABEL_SCRIPT_BODY"
+msgstr "Script Body"
+
+msgid "LABEL_SCRIPT_FOOTER"
+msgstr "Script Footer"

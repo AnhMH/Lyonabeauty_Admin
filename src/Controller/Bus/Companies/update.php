@@ -72,6 +72,10 @@ $this->UpdateForm->reset()
         'label' => __('LABEL_YOUTUBE'),
     ))
     ->addElement(array(
+        'id' => 'zalo',
+        'label' => __('LABEL_ZALO'),
+    ))
+    ->addElement(array(
         'id' => 'seo_image',
         'label' => __('LABEL_SEO_IMAGE'),
         'image' => true,
@@ -80,10 +84,30 @@ $this->UpdateForm->reset()
     ->addElement(array(
         'id' => 'seo_description',
         'label' => __('LABEL_SEO_DESCRIPTION'),
+        'type' => 'textarea',
     ))
     ->addElement(array(
         'id' => 'seo_keyword',
         'label' => __('LABEL_SEO_KEYWORD'),
+        'type' => 'textarea',
+    ))
+    ->addElement(array(
+        'id' => 'script_header',
+        'label' => __('LABEL_SCRIPT_HEADER'),
+        'type' => 'textarea',
+        'rows' => 7
+    ))
+    ->addElement(array(
+        'id' => 'script_body',
+        'label' => __('LABEL_SCRIPT_BODY'),
+        'type' => 'textarea',
+        'rows' => 7
+    ))
+    ->addElement(array(
+        'id' => 'script_footer',
+        'label' => __('LABEL_SCRIPT_FOOTER'),
+        'type' => 'textarea',
+        'rows' => 7
     ))
     ->addElement(array(
         'type' => 'submit',

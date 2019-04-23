@@ -47,14 +47,7 @@
                 </a>
             </li>
             
-            <li class="<?php if (in_array($controller, array('companies'))) echo ' active ' ?>">
-                <a href="<?php echo $BASE_URL;?>/companies/update">
-                    <i class="fa fa-user-secret"></i>
-                    <span><?php echo __('LABEL_COMPANIES_MANAGEMENT'); ?></span>
-                </a>
-            </li>
-            
-            <li class="treeview <?php if (in_array($controller, array('admins'))) echo ' active ' ?>">
+            <li class="treeview <?php if (in_array($controller, array('admins', 'companies'))) echo ' active ' ?>">
                 <a href="#">
                     <i class="fa fa-cogs"></i> 
                     <span><span><?php echo __('LABEL_SETTING_MANAGEMENT'); ?></span></span>
@@ -66,6 +59,12 @@
                     <li class="<?php if ($controller == 'admins' && in_array($action, array('updateprofile'))) echo ' active ' ?>">
                         <a href="<?php echo $BASE_URL; ?>/admins/updateprofile">
                             <i class="fa fa-circle-o"></i> <?php echo __('LABEL_UPDATE_PROFILE');?>
+                        </a>
+                    </li>
+                    <li class="<?php if ($controller == 'companies') echo ' active ' ?>">
+                        <a href="<?php echo $BASE_URL;?>/companies/update">
+                            <i class="fa fa-circle-o"></i>
+                            <span><?php echo __('LABEL_COMPANIES_MANAGEMENT'); ?></span>
                         </a>
                     </li>
                 </ul>

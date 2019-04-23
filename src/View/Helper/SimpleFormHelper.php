@@ -92,6 +92,11 @@ class SimpleFormHelper extends AppHelper {
                 $html .= $this->Form->submit($control['value'], $control);
             } elseif ($controlType == 'password') {
                 $html .= $this->Form->input($control['id'], $control);
+            } elseif ($controlType == 'textarea') {
+                $html .= '<div class="form-group">';
+                $html .= '<label>' . $control['label']['text'] . '</label>';
+                $html .= $this->Form->textarea($control['id'], $control);
+                $html .= '</div>';
             } elseif ($controlType == 'editor') {
                 $html .= $this->Common->editor($control);
             } elseif ($controlType == 'checkbox') {
