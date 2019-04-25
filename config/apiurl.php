@@ -14,3 +14,7 @@ Configure::write('API.url_admins_updateprofile', 'admins/updateprofile');
 
 Configure::write('API.url_companies_addupdate', 'companies/addupdate');
 Configure::write('API.url_companies_detail', 'companies/detail');
+
+Configure::write('API.url_banners_list', 'banners/list');
+Configure::write('API.url_banners_addupdate', 'banners/addupdate');
+Configure::write('API.url_banners_detail', 'banners/detail');
