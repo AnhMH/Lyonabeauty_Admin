@@ -244,7 +244,7 @@ class AppController extends Controller
                     case 'disable':
                         $param['disable'] = ($data['action'] == 'disable' ? 1 : 0);
                         $_controller = $this->request->params['controller'];
-                        if (in_array($_controller, array('postcates'))) {
+                        if (in_array($_controller, array('postcates', 'Productcates'))) {
                             $_controller = 'cates';
                         }
                         Api::call("{$_controller}/disable", $param);

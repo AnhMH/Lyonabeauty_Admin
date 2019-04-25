@@ -47,6 +47,28 @@
                 </ul>
             </li>
             
+            <li class="treeview <?php if (in_array($controller, array('products', 'productcates'))) echo ' active ' ?>">
+                <a href="#">
+                    <i class="fa fa-product-hunt"></i> 
+                    <span><span><?php echo __('LABEL_PRODUCT_MANAGEMENT'); ?></span></span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="<?php if ($controller == 'products') echo ' active ' ?>">
+                        <a href="<?php echo $BASE_URL; ?>/products">
+                            <i class="fa fa-circle-o"></i> <?php echo __('LABEL_PRODUCT_LIST');?>
+                        </a>
+                    </li>
+                    <li class="<?php if ($controller == 'productcates') echo ' active ' ?>">
+                        <a href="<?php echo $BASE_URL; ?>/productcates">
+                            <i class="fa fa-circle-o"></i> <?php echo __('LABEL_CATE');?>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            
             <li class="treeview <?php if (in_array($controller, array('admins', 'companies'))) echo ' active ' ?>">
                 <a href="#">
                     <i class="fa fa-cogs"></i> 
