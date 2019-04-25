@@ -351,3 +351,12 @@ msgstr "Script Body"
 
 msgid "LABEL_SCRIPT_FOOTER"
 msgstr "Script Footer"
+
+msgid "LABEL_BANNER_MANAGEMENT"
+msgstr "Quản lý slider"
+
+msgid "LABEL_BANNER_LIST"
+msgstr "Danh sách slider"
+
+msgid "LABEL_BANNER_UPDATE"
+msgstr "Cập nhật slider"

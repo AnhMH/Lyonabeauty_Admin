@@ -112,6 +112,9 @@ function toggleChange(item) {
     var id = _this.val();
     var data_field = _this.attr('data-field');
     var data_controller = controller;
+    if (data_controller == 'postcates') {
+        data_controller = 'cates';
+    }
     var classList = _this.attr('class').split(/\s+/);//get controller in case there are multi-controllers on a screen
     if (classList.length == 2) {
         data_controller = classList[1];

@@ -19,32 +19,32 @@
                 </a>
             </li>
             
-            <li class="<?php if (in_array($controller, array('posts'))) echo ' active ' ?>">
-                <a href="<?php echo $BASE_URL; ?>/posts">
-                    <i class="fa fa-shopping-cart"></i>
-                    <span><?php echo __('LABEL_POST_MANAGEMENT'); ?></span>
+            <li class="<?php if (in_array($controller, array('banners'))) echo ' active ' ?>">
+                <a href="<?php echo $BASE_URL; ?>/banners">
+                    <i class="fa fa-image"></i>
+                    <span><?php echo __('LABEL_BANNER_MANAGEMENT'); ?></span>
                 </a>
             </li>
-            
-            <li class="<?php if (in_array($controller, array('cates'))) echo ' active ' ?>">
-                <a href="<?php echo $BASE_URL;?>/cates">
-                    <i class="fa fa-shopping-bag"></i>
-                    <span><?php echo __('LABEL_CATE_MANAGEMENT'); ?></span>
+            <li class="treeview <?php if (in_array($controller, array('posts', 'postcates'))) echo ' active ' ?>">
+                <a href="#">
+                    <i class="fa fa-newspaper-o"></i> 
+                    <span><span><?php echo __('LABEL_POST_MANAGEMENT'); ?></span></span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
                 </a>
-            </li>
-            
-            <li class="<?php if (in_array($controller, array('customers'))) echo ' active ' ?>">
-                <a href="<?php echo $BASE_URL;?>/customers">
-                    <i class="fa fa-user"></i>
-                    <span><?php echo __('LABEL_CUSTOMER_MANAGEMENT'); ?></span>
-                </a>
-            </li>
-            
-            <li class="<?php if (in_array($controller, array('suppliers'))) echo ' active ' ?>">
-                <a href="<?php echo $BASE_URL;?>/suppliers">
-                    <i class="fa fa-user-secret"></i>
-                    <span><?php echo __('LABEL_SUPPLIERS_MANAGEMENT'); ?></span>
-                </a>
+                <ul class="treeview-menu">
+                    <li class="<?php if ($controller == 'posts') echo ' active ' ?>">
+                        <a href="<?php echo $BASE_URL; ?>/posts">
+                            <i class="fa fa-circle-o"></i> <?php echo __('LABEL_POST_LIST');?>
+                        </a>
+                    </li>
+                    <li class="<?php if ($controller == 'postcates') echo ' active ' ?>">
+                        <a href="<?php echo $BASE_URL; ?>/postcates">
+                            <i class="fa fa-circle-o"></i> <?php echo __('LABEL_CATE');?>
+                        </a>
+                    </li>
+                </ul>
             </li>
             
             <li class="treeview <?php if (in_array($controller, array('admins', 'companies'))) echo ' active ' ?>">

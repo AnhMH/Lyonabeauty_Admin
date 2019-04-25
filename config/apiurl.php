@@ -18,3 +18,8 @@ Configure::write('API.url_companies_detail', 'companies/detail');
 Configure::write('API.url_banners_list', 'banners/list');
 Configure::write('API.url_banners_addupdate', 'banners/addupdate');
 Configure::write('API.url_banners_detail', 'banners/detail');
+
+Configure::write('API.url_cates_list', 'cates/list');
+Configure::write('API.url_cates_addupdate', 'cates/addupdate');
+Configure::write('API.url_cates_detail', 'cates/detail');
+Configure::write('API.url_cates_all', 'cates/all');
