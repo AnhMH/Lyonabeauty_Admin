@@ -67,6 +67,11 @@ $this->UpdateForm->reset()
         'label' => __('LABEL_POSITION'),
     ))
     ->addElement(array(
+        'id' => 'is_homepage',
+        'label' => __('LABEL_IS_HOMEPAGE'),
+        'options' => Configure::read('Config.noYes')
+    ))
+    ->addElement(array(
         'type' => 'submit',
         'value' => __('LABEL_SAVE'),
         'class' => 'btn btn-primary',

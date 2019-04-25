@@ -246,6 +246,10 @@ Configure::write('Config.searchStatus', array(
     0 => __('LABEL_ACTIVE'),
     1 => __('LABEL_INACTIVE'),
 ));
+Configure::write('Config.noYes', array(
+    0 => __('LABEL_NO'),
+    1 => __('LABEL_YES'),
+));
 
 if ($env == 'production') {
     define('VERSION_DATE', date('Ymd'));

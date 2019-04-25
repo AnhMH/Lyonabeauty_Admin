@@ -72,6 +72,11 @@ $this->SimpleTable
             'empty' => '-'
         ))
         ->addColumn(array(
+            'id' => 'is_homepage',
+            'title' => __('LABEL_IS_HOMEPAGE'),
+            'empty' => '0'
+        ))
+        ->addColumn(array(
             'id' => 'created',
             'type' => 'dateonly',
             'title' => __('LABEL_CREATED'),
