@@ -23,7 +23,9 @@ if (!empty($id)) {
     $pageTitle = __('LABEL_ADD_NEW');
 }
 
-$suppliers = $this->Common->arrayKeyValue(Api::call(Configure::read('API.url_suppliers_all'), array()), 'id', 'name');
+$cates = $this->Common->arrayKeyValue(Api::call(Configure::read('API.url_cates_all'), array(
+    'type' => 2
+)), 'id', 'name');
 
 // Create breadcrumb
 $listPageUrl = h($this->BASE_URL . '/products');
@@ -53,14 +55,14 @@ $this->UpdateForm->reset()
         'required' => true,
     ))
     ->addElement(array(
-        'id' => 'supplier_id',
-        'label' => __('LABEL_SUPPLIER'),
-        'options' => $suppliers,
+        'id' => 'cate_id',
+        'label' => __('LABEL_CATE'),
+        'options' => $cates,
         'empty' => '-'
     ))
     ->addElement(array(
-        'id' => 'avatar',
-        'label' => __('LABEL_AVATAR'),
+        'id' => 'image',
+        'label' => __('LABEL_IMAGE'),
         'image' => true,
         'type' => 'file'
     ))
@@ -69,13 +71,23 @@ $this->UpdateForm->reset()
         'label' => __('LABEL_PRICE'),
     ))
     ->addElement(array(
-        'id' => 'qty',
-        'label' => __('LABEL_STOCK'),
-    ))
-    ->addElement(array(
         'id' => 'description',
         'label' => __('LABEL_DESCRIPTION'),
+        'type' => 'textarea'
+    ))
+    ->addElement(array(
+        'id' => 'detail',
+        'label' => __('LABEL_DETAIL'),
         'type' => 'editor'
+    ))
+    ->addElement(array(
+        'id' => 'seo_keyword',
+        'label' => __('LABEL_SEO_KEYWORD')
+    ))
+    ->addElement(array(
+        'id' => 'seo_description',
+        'label' => __('LABEL_SEO_DESCRIPTION'),
+        'type' => 'textarea'
     ))
     ->addElement(array(
         'type' => 'submit',
@@ -100,11 +112,11 @@ if ($this->request->is('post')) {
     }
     // Validation
     if ($form->validate($data)) {
-        if (!empty($data['avatar']['name'])) {
-            $filetype = $data['avatar']['type'];
-            $filename = $data['avatar']['name'];
-            $filedata = $data['avatar']['tmp_name'];
-            $data['avatar'] = new CurlFile($filedata, $filetype, $filename);
+        if (!empty($data['image']['name'])) {
+            $filetype = $data['image']['type'];
+            $filename = $data['image']['name'];
+            $filedata = $data['image']['tmp_name'];
+            $data['image'] = new CurlFile($filedata, $filetype, $filename);
         }
         // Call API
         $id = Api::call(Configure::read('API.url_products_addupdate'), $data);

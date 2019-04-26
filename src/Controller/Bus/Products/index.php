@@ -42,8 +42,7 @@ $this->SearchForm
         ));
 
 $param = $this->getParams(array(
-    'limit' => $pageSize,
-    'disable' => 0
+    'limit' => $pageSize
 ));
 
 $result = Api::call(Configure::read('API.url_products_list'), $param);
@@ -61,10 +60,10 @@ $this->SimpleTable
             'width' => 20,
         ))
         ->addColumn(array(
-            'id' => 'avatar',
+            'id' => 'image',
             'title' => __('LABEL_AVATAR'),
             'type' => 'image',
-            'src' => '{avatar}',
+            'src' => '{image}',
             'width' => 110,
             'empty' => ''
         ))
@@ -76,26 +75,18 @@ $this->SimpleTable
             'empty' => ''
         ))
         ->addColumn(array(
+            'id' => 'cate_name',
+            'title' => __('LABEL_CATE'),
+            'empty' => ''
+        ))
+        ->addColumn(array(
             'id' => 'price',
             'title' => __('LABEL_PRICE'),
             'empty' => ''
         ))
-//        ->addColumn(array(
-//            'id' => 'discount',
-//            'title' => __('LABEL_DISCOUNT'),
-//            'width' => 150,
-//            'empty' => ''
-//        ))
         ->addColumn(array(
-            'id' => 'sell_qty',
-            'title' => __('LABEL_SELL_QTY'),
-            'width' => 100,
-            'empty' => ''
-        ))
-        ->addColumn(array(
-            'id' => 'qty',
-            'title' => __('LABEL_STOCK'),
-            'width' => 100,
+            'id' => 'description',
+            'title' => __('LABEL_DESCRIPTION'),
             'empty' => ''
         ))
         ->addColumn(array(
@@ -110,6 +101,24 @@ $this->SimpleTable
             'title' => __('LABEL_EDIT'),
             'href' => $this->BASE_URL . '/' . $this->controller . '/update/{id}',
             'button' => true,
+            'width' => 50,
+        ))
+        ->addColumn(array(
+            'id' => 'disable',
+            'type' => 'checkbox',
+            'title' => __('LABEL_DELETE'),
+            'toggle' => true,
+            'toggle-onstyle' => "primary",
+            'toggle-offstyle' => "danger",
+            'toggle-options' => array(
+                "data-on" => __("LABEL_ENABLE"),
+                "data-off" => __("LABEL_DELETE"),
+            ),
+            'rules' => array(
+                '0' => '',
+                '1' => 'checked'
+            ),
+            'empty' => 0,
             'width' => 50,
         ))
         ->addButton(array(
