@@ -51,8 +51,9 @@ $this->UpdateForm->reset()
         'required' => true,
     ))
     ->addElement(array(
-        'id' => 'tel',
-        'label' => __('LABEL_TEL'),
+        'id' => 'phone',
+        'type' => 'text',
+        'label' => __('LABEL_PHONE'),
     ))
     ->addElement(array(
         'id' => 'address',

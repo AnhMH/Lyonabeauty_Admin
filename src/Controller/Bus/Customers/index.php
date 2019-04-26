@@ -29,7 +29,7 @@ $this->SearchForm
             'label' => __('LABEL_ADDRESS')
         ))
         ->addElement(array(
-            'id' => 'tel',
+            'id' => 'phone',
             'label' => __('LABEL_TEL')
         ))
         ->addElement(array(
@@ -54,8 +54,7 @@ $this->SearchForm
         ));
 
 $param = $this->getParams(array(
-    'limit' => $pageSize,
-    'disable' => 0
+    'limit' => $pageSize
 ));
 
 $result = Api::call(Configure::read('API.url_customers_list'), $param);
@@ -85,7 +84,7 @@ $this->SimpleTable
             'empty' => ''
         ))
         ->addColumn(array(
-            'id' => 'tel',
+            'id' => 'phone',
             'title' => __('LABEL_TEL'),
             'width' => 150,
             'empty' => ''
@@ -95,12 +94,6 @@ $this->SimpleTable
             'title' => __('LABEL_EMAIL'),
             'width' => 150,
             'empty' => ''
-        ))
-        ->addColumn(array(
-            'id' => 'order_count',
-            'title' => __('LABEL_ORDER_COUNT'),
-            'width' => 150,
-            'empty' => 0
         ))
         ->addColumn(array(
             'id' => 'created',
@@ -116,24 +109,24 @@ $this->SimpleTable
             'button' => true,
             'width' => 50,
         ))
-//        ->addColumn(array(
-//            'id' => 'disable',
-//            'type' => 'checkbox',
-//            'title' => __('LABEL_DELETE'),
-//            'toggle' => true,
-//            'toggle-onstyle' => "primary",
-//            'toggle-offstyle' => "danger",
-//            'toggle-options' => array(
-//                "data-on" => __("LABEL_ENABLE"),
-//                "data-off" => __("LABEL_DELETE"),
-//            ),
-//            'rules' => array(
-//                '0' => '',
-//                '1' => 'checked'
-//            ),
-//            'empty' => 0,
-//            'width' => 50,
-//        ))
+        ->addColumn(array(
+            'id' => 'disable',
+            'type' => 'checkbox',
+            'title' => __('LABEL_DELETE'),
+            'toggle' => true,
+            'toggle-onstyle' => "primary",
+            'toggle-offstyle' => "danger",
+            'toggle-options' => array(
+                "data-on" => __("LABEL_ENABLE"),
+                "data-off" => __("LABEL_DELETE"),
+            ),
+            'rules' => array(
+                '0' => '',
+                '1' => 'checked'
+            ),
+            'empty' => 0,
+            'width' => 50,
+        ))
         ->addButton(array(
             'type' => 'submit',
             'value' => __('LABEL_ADD_NEW'),

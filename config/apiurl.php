@@ -29,6 +29,11 @@ Configure::write('API.url_posts_addupdate', 'posts/addupdate');
 Configure::write('API.url_posts_detail', 'posts/detail');
 Configure::write('API.url_posts_all', 'posts/all');
 
+Configure::write('API.url_customers_list', 'customers/list');
+Configure::write('API.url_customers_addupdate', 'customers/addupdate');
+Configure::write('API.url_customers_detail', 'customers/detail');
+Configure::write('API.url_customers_all', 'customers/all');
+
 Configure::write('API.url_cates_list', 'cates/list');
 Configure::write('API.url_cates_addupdate', 'cates/addupdate');
 Configure::write('API.url_cates_detail', 'cates/detail');
