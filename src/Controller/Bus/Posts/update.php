@@ -22,12 +22,10 @@ if (!empty($id)) {
     $pageTitle = __('LABEL_ADD_NEW');
 }
 
-$cates = $this->Common->arrayKeyValue(Api::call(Configure::read('API.url_cates_all'), array()), 'id', 'name');
-$types = array(
-    0 => 'Tin tức',
-    1 => 'Hình ảnh',
-    2 => 'Video'
-);
+$cates = $this->Common->arrayKeyValue(Api::call(Configure::read('API.url_cates_all'), array(
+    'type' => 2
+)), 'id', 'name');
+
 // Create breadcrumb
 $listPageUrl = h($this->BASE_URL . '/posts');
 $this->Breadcrumb->setTitle($pageTitle)
@@ -70,11 +68,7 @@ $this->UpdateForm->reset()
     ->addElement(array(
         'id' => 'description',
         'label' => __('LABEL_DESCRIPTION'),
-        'empty' => ''
-    ))
-    ->addElement(array(
-        'id' => 'keyword',
-        'label' => __('LABEL_KEYWORD'),
+        'type' => 'textarea',
         'empty' => ''
     ))
     ->addElement(array(
@@ -83,10 +77,15 @@ $this->UpdateForm->reset()
         'type' => 'editor'
     ))
     ->addElement(array(
-        'id' => 'type',
-        'label' => __('LABEL_TYPE'),
-        'options' => $types,
-        'empty' => '0'
+        'id' => 'seo_keyword',
+        'label' => __('LABEL_SEO_KEYWORD'),
+        'empty' => ''
+    ))
+    ->addElement(array(
+        'id' => 'seo_description',
+        'label' => __('LABEL_SEO_DESCRIPTION'),
+        'type' => 'textarea',
+        'empty' => ''
     ))
     ->addElement(array(
         'type' => 'submit',
