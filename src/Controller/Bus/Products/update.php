@@ -23,9 +23,11 @@ if (!empty($id)) {
     $pageTitle = __('LABEL_ADD_NEW');
 }
 
-$cates = $this->Common->arrayKeyValue(Api::call(Configure::read('API.url_cates_all'), array(
+$cateParam = array(
     'type' => 1
-)), 'id', 'name');
+);
+$cates = $this->showCategories(Api::call(Configure::read('API.url_cates_all'), $cateParam));
+$cates = $this->Common->arrayKeyValue($this->_cateTemp, 'id', 'name');
 
 // Create breadcrumb
 $listPageUrl = h($this->BASE_URL . '/products');
@@ -71,6 +73,10 @@ $this->UpdateForm->reset()
         'label' => __('LABEL_PRICE'),
     ))
     ->addElement(array(
+        'id' => 'discount_price',
+        'label' => __('LABEL_DISCOUNT_PRICE'),
+    ))
+    ->addElement(array(
         'id' => 'description',
         'label' => __('LABEL_DESCRIPTION'),
         'type' => 'textarea'
@@ -79,6 +85,11 @@ $this->UpdateForm->reset()
         'id' => 'detail',
         'label' => __('LABEL_DETAIL'),
         'type' => 'editor'
+    ))
+    ->addElement(array(
+        'id' => 'is_hot',
+        'label' => __('LABEL_IS_HOT'),
+        'options' => Configure::read('Config.noYes')
     ))
     ->addElement(array(
         'id' => 'seo_keyword',

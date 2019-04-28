@@ -369,3 +369,15 @@ msgstr "Vị trí"
 
 msgid "LABEL_IS_HOMEPAGE"
 msgstr "Hiển thị ở trang chủ"
+
+msgid "LABEL_IS_HOT"
+msgstr "Sản phẩm HOT"
+
+msgid "LABEL_DISCOUNT_PRICE"
+msgstr "Giảm giá"
+
+msgid "LABEL_NO"
+msgstr "No"
+
+msgid "LABEL_YES"
+msgstr "Yes"
