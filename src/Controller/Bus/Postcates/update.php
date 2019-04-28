@@ -21,13 +21,13 @@ if (!empty($id)) {
     // Create new
     $pageTitle = __('LABEL_ADD_NEW');
 }
-$cateParam = array(
-    'type' => 2
-);
-if (!empty($id)) {
-    $cateParam['not_id'] = $id;
-}
-$cates = $this->Common->arrayKeyValue(Api::call(Configure::read('API.url_cates_all'), $cateParam), 'id', 'name');
+//$cateParam = array(
+//    'type' => 2
+//);
+//if (!empty($id)) {
+//    $cateParam['not_id'] = $id;
+//}
+//$cates = $this->Common->arrayKeyValue(Api::call(Configure::read('API.url_cates_all'), $cateParam), 'id', 'name');
 
 // Create breadcrumb
 $listPageUrl = h($this->BASE_URL . '/postcates');
@@ -56,12 +56,12 @@ $this->UpdateForm->reset()
         'label' => __('LABEL_NAME'),
         'required' => true,
     ))
-    ->addElement(array(
-        'id' => 'parent_id',
-        'label' => __('LABEL_CATE'),
-        'options' => $cates,
-        'empty' => '-'
-    ))
+//    ->addElement(array(
+//        'id' => 'parent_id',
+//        'label' => __('LABEL_CATE'),
+//        'options' => $cates,
+//        'empty' => '-'
+//    ))
     ->addElement(array(
         'id' => 'position',
         'label' => __('LABEL_POSITION'),

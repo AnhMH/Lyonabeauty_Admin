@@ -360,3 +360,12 @@ msgstr "Danh sách slider"
 
 msgid "LABEL_BANNER_UPDATE"
 msgstr "Cập nhật slider"
+
+msgid "LABEL_CATE_PARENT"
+msgstr "Danh mục cha"
+
+msgid "LABEL_POSITION"
+msgstr "Vị trí"
+
+msgid "LABEL_IS_HOMEPAGE"
+msgstr "Hiển thị ở trang chủ"

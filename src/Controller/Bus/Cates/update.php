@@ -22,7 +22,7 @@ if (!empty($id)) {
     $pageTitle = __('LABEL_ADD_NEW');
 }
 
-$cates = $this->Common->arrayKeyValue(Api::call(Configure::read('API.url_cates_all'), array()), 'id', 'name');
+$cates = $this->Common->arrayKeyValue($this->showCategories(Api::call(Configure::read('API.url_cates_all')), array()), 'id', 'name');
 
 // Create breadcrumb
 $listPageUrl = h($this->BASE_URL . '/cates');

@@ -27,8 +27,8 @@ $cateParam = array(
 if (!empty($id)) {
     $cateParam['not_id'] = $id;
 }
-$cates = $this->Common->arrayKeyValue(Api::call(Configure::read('API.url_cates_all'), $cateParam), 'id', 'name');
-
+$cates = $this->showCategories(Api::call(Configure::read('API.url_cates_all'), $cateParam));
+$cates = $this->Common->arrayKeyValue($this->_cateTemp, 'id', 'name');
 // Create breadcrumb
 $listPageUrl = h($this->BASE_URL . '/productcates');
 $this->Breadcrumb->setTitle($pageTitle)
@@ -58,7 +58,7 @@ $this->UpdateForm->reset()
     ))
     ->addElement(array(
         'id' => 'parent_id',
-        'label' => __('LABEL_CATE'),
+        'label' => __('LABEL_CATE_PARENT'),
         'options' => $cates,
         'empty' => '-'
     ))
