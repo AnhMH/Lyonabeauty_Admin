@@ -72,7 +72,7 @@ $this->UpdateForm->reset()
         'empty' => ''
     ))
     ->addElement(array(
-        'id' => 'content',
+        'id' => 'detail',
         'label' => __('LABEL_CONTENT'),
         'type' => 'editor'
     ))
