@@ -1,8 +1,8 @@
 <header class="main-header">
     <!-- Logo -->
-    <a href="<?php echo $BASE_URL;?>" class="logo">
+<!--    <a href="<?php echo $BASE_URL;?>" class="logo">
         <span class="logo-lg"><b>VNS</b>HOP</span>
-    </a>
+    </a>-->
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
         <!-- Sidebar toggle button-->
