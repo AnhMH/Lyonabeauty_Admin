@@ -381,3 +381,6 @@ msgstr "No"
 
 msgid "LABEL_YES"
 msgstr "Yes"
+
+msgid "LABEL_LINK"
+msgstr "Đường dẫn"

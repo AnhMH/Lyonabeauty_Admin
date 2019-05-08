@@ -24,19 +24,14 @@ $this->SearchForm
             'options' => Configure::read('Config.searchPageSize'),
         ))
         ->addElement(array(
-            'id' => 'disable',
-            'label' => __('LABEL_STATUS'),
-            'options' => Configure::read('Config.searchStatus'),
-            'empty' => 0
-        ))
-        ->addElement(array(
             'type' => 'submit',
             'value' => __('LABEL_SEARCH'),
             'class' => 'btn btn-primary',
         ));
 
 $param = $this->getParams(array(
-    'limit' => $pageSize
+    'limit' => $pageSize,
+    'disable' => 0
 ));
 
 $result = Api::call(Configure::read('API.url_banners_list'), $param);
