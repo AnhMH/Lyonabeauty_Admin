@@ -38,3 +38,5 @@ Configure::write('API.url_cates_list', 'cates/list');
 Configure::write('API.url_cates_addupdate', 'cates/addupdate');
 Configure::write('API.url_cates_detail', 'cates/detail');
 Configure::write('API.url_cates_all', 'cates/all');
+
+Configure::write('API.url_reports_general', 'reports/general');

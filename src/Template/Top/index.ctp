@@ -34,14 +34,14 @@
         <!-- small box -->
         <div class="small-box bg-yellow">
             <div class="inner">
-                <h3><?php echo !empty($data['supplier_count']) ? $data['supplier_count'] : 0;?></h3>
+                <h3><?php echo !empty($data['post_count']) ? $data['post_count'] : 0;?></h3>
 
-                <p><?php echo __('LABEL_SUPPLIER');?></p>
+                <p><?php echo __('Bài viết');?></p>
             </div>
             <div class="icon">
                 <i class="ion ion-android-contacts"></i>
             </div>
-            <a href="<?php echo $BASE_URL;?>/suppliers" class="small-box-footer"><?php echo __('LABEL_MORE_INFO');?> <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="<?php echo $BASE_URL;?>/posts" class="small-box-footer"><?php echo __('LABEL_MORE_INFO');?> <i class="fa fa-arrow-circle-right"></i></a>
         </div>
     </div>
     <!-- ./col -->
