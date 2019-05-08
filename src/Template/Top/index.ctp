@@ -49,14 +49,14 @@
         <!-- small box -->
         <div class="small-box bg-green">
             <div class="inner">
-                <h3><?php echo !empty($data['customer_count']) ? $data['customer_count'] : 0;?></h3>
+                <h3><?php echo !empty($data['contact_count']) ? $data['contact_count'] : 0;?></h3>
 
-                <p><?php echo __('LABEL_CUSTOMER');?></p>
+                <p><?php echo __('Liên hệ');?></p>
             </div>
             <div class="icon">
                 <i class="ion-android-people"></i>
             </div>
-            <a href="<?php echo $BASE_URL;?>/customers" class="small-box-footer"><?php echo __('LABEL_MORE_INFO');?> <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="<?php echo $BASE_URL;?>/contacts" class="small-box-footer"><?php echo __('LABEL_MORE_INFO');?> <i class="fa fa-arrow-circle-right"></i></a>
         </div>
     </div>
     <!-- ./col -->
