@@ -77,6 +77,13 @@
                 </a>
             </li>
             
+            <li class="<?php if (in_array($controller, array('contacts'))) echo ' active ' ?>">
+                <a href="<?php echo $BASE_URL; ?>/contacts">
+                    <i class="fa fa-users"></i>
+                    <span><?php echo __('LABEL_CONTACT_MANAGEMENT'); ?></span>
+                </a>
+            </li>
+            
 <!--            <li class="<?php if (in_array($controller, array('customers'))) echo ' active ' ?>">
                 <a href="<?php echo $BASE_URL; ?>/customers">
                     <i class="fa fa-user"></i>

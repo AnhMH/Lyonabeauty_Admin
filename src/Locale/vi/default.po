@@ -384,3 +384,9 @@ msgstr "Yes"
 
 msgid "LABEL_LINK"
 msgstr "Đường dẫn"
+
+msgid "LABEL_CONTACT_MANAGEMENT"
+msgstr "Quản lý liên hệ"
+
+msgid "LABEL_CONTACT_LIST"
+msgstr "Danh sách liên hệ"
