@@ -64,7 +64,7 @@ $this->UpdateForm->reset()
     ))
     ->addElement(array(
         'id' => 'image',
-        'label' => __('LABEL_IMAGE'),
+        'label' => __('LABEL_IMAGE').'(378x378)',
         'image' => true,
         'type' => 'file'
     ))

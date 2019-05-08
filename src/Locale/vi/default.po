@@ -314,7 +314,7 @@ msgid "LABEL_TYPE"
 msgstr "Thể loại"
 
 msgid "LABEL_LOGO"
-msgstr "Logo (123x28px)"
+msgstr "Logo (300x29px)"
 
 msgid "LABEL_TWITTER"
 msgstr "Twitter"
