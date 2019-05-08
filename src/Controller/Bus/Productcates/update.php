@@ -22,7 +22,8 @@ if (!empty($id)) {
     $pageTitle = __('LABEL_ADD_NEW');
 }
 $cateParam = array(
-    'type' => 1
+    'type' => 1,
+    'parent_id' => 0
 );
 if (!empty($id)) {
     $cateParam['not_id'] = $id;
